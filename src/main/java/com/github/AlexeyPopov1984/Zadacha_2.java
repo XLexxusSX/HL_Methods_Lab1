@@ -10,8 +10,8 @@ public class Zadacha_2 {
     public static String textMirror(String anyStr) {
 
         StringBuilder sbAnyStr = new StringBuilder(anyStr);
-        char ch = ' ';
-        String mirroredText = "";
+        char ch;
+        String mirroredText;
 
             for (int i = 0; i < anyStr.length() / 2; i++) {
                 ch = anyStr.charAt(i);
