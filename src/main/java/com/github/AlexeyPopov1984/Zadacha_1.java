@@ -8,7 +8,7 @@ public class Zadacha_1 {
 
         System.out.println("\nReshenie zadachi 1:");
         String str = String.join(" ", sequence(500));
-        System.out.println(str);
+        System.out.println("Preobrazovannaya stroka: " + str);
     }
 
     public static List<String> sequence(int n) {
