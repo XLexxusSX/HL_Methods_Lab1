@@ -23,28 +23,21 @@ public class Main {
             System.out.print("Vvedite nomer zadachi (ot 1 do 5) dlya pokaza ee resheniya ili 'q' dlya vyhoda: ");
 
             String input = scanner.nextLine();
-            if (input.equalsIgnoreCase("q")) {
-                break;
-            }
-            else if (input.equalsIgnoreCase("1")) {
-                System.out.println("\nReshenie zadachi 1:");
-            }
-            else if (input.equalsIgnoreCase("2")) {
-                System.out.println("\nReshenie zadachi 2:");
-            }
-            else if (input.equalsIgnoreCase("3")) {
-                System.out.println("\nReshenie zadachi 3:");
-            }
-            else if (input.equalsIgnoreCase("4")) {
-                System.out.println("\nReshenie zadachi 4:");
-            }
-            else if (input.equalsIgnoreCase("5")) {
-                System.out.println("\nReshenie zadachi 5:");
-            }
-            else {
-                System.out.println("\nNeverniy vvod. Poprobuyte snova.");
-            }
 
+            if (input.equalsIgnoreCase("q"))
+                break;
+            else if (input.equalsIgnoreCase("1"))
+                Zadacha_1.zadacha_1();
+            else if (input.equalsIgnoreCase("2"))
+                Zadacha_2.zadacha_2();
+            else if (input.equalsIgnoreCase("3"))
+                System.out.println("\nReshenie zadachi 3:");
+            else if (input.equalsIgnoreCase("4"))
+                System.out.println("\nReshenie zadachi 4:");
+            else if (input.equalsIgnoreCase("5"))
+                System.out.println("\nReshenie zadachi 5:");
+            else
+                System.out.println("\nNeverniy vvod. Poprobuyte snova.");
         } while (true);
     }
 }
