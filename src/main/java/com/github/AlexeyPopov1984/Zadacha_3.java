@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Zadacha_3 {
     public static void zadacha_3() {
         Scanner scanner = new Scanner(System.in);
-        String koefAstring = "", koefBstring = "", koefCstring = "";
+        String koefAstring = "", koefBstring = "", koefCstring = "", answer = "";
         double koefAdouble = 0, koefBdouble = 0, koefCdouble = 0;
 
         System.out.println("\nRESHENIE ZADACHI 3");
@@ -98,77 +98,90 @@ public class Zadacha_3 {
             else koefCstring = " - " + koefCdouble * (-1);
         }
 
+        answer = roots(koefAdouble, koefBdouble, koefCdouble, koefAstring, koefBstring, koefCstring);
+        System.out.println(answer);
+    }
+
+    private static String roots(double _koefAdouble, double _koefBdouble, double _koefCdouble, String _koefAstring, String _koefBstring, String _koefCstring) {
+        String _answer = "";
+        double D = 0, x1 = 0, x2 = 0;
+
         // Если А == 0, B != 0, C != 0 (проверено)
-        if (koefAdouble == 0 && koefBdouble != 0 && koefCdouble != 0) {
-            if (koefBdouble > 0) {
-                koefBstring = koefBstring.replace(" ", "");
-                koefBstring = koefBstring.substring(1);
-                System.out.println("\nVashe kvadratnoe uravnenie " + koefBstring + "x" + koefCstring + " = 0");
-            } else if (koefBdouble < 0) {
-                koefBstring = koefBstring.replace(" ", "");
-                System.out.println("\nVashe kvadratnoe uravnenie " + koefBstring + "x" + koefCstring + " = 0");
+        if (_koefAdouble == 0 && _koefBdouble != 0 && _koefCdouble != 0) {
+            if (_koefBdouble > 0) {
+                _koefBstring = _koefBstring.replace(" ", "");
+                _koefBstring = _koefBstring.substring(1);
+                _answer = "\nVashe uravnenie " + _koefBstring + "x" + _koefCstring + " = 0 ne yavlyaetsya kvadratnym";
+            } else if (_koefBdouble < 0) {
+                _koefBstring = _koefBstring.replace(" ", "");
+                _answer = "\nVashe uravnenie " + _koefBstring + "x" + _koefCstring + " = 0 ne yavlyaetsya kvadratnym";
             }
         }
 
         // Если А != 0, B == 0, C != 0 (преверено)
-        else if (koefAdouble != 0 && koefBdouble == 0 && koefCdouble != 0) {
-            System.out.println("\nVashe kvadratnoe uravnenie " + koefAstring + "x^2" + koefCstring + " = 0");
+        else if (_koefAdouble != 0 && _koefBdouble == 0 && _koefCdouble != 0) {
+            System.out.println("\nVashe kvadratnoe uravnenie: " + _koefAstring + "x^2" + _koefCstring + " = 0");
         }
 
         // Если А != 0, B != 0, C == 0 (проверено)
-        else if (koefAdouble != 0 && koefBdouble != 0 && koefCdouble == 0) {
-            System.out.println("\nVashe kvadratnoe uravnenie " + koefAstring + "x^2" + koefBstring + "x" + " = 0");
+        else if (_koefAdouble != 0 && _koefBdouble != 0 && _koefCdouble == 0) {
+            System.out.println("\nVashe kvadratnoe uravnenie: " + _koefAstring + "x^2" + _koefBstring + "x" + " = 0");
         }
 
         // Если А == 0, B == 0, C != 0 (проверено)
-        else if (koefAdouble == 0 && koefBdouble == 0 && koefCdouble != 0) {
-            if (koefCdouble > 0) {
-                koefCstring = koefCstring.replace(" ", "");
-                koefCstring = koefCstring.substring(1);
-                System.out.println("\n" + koefCstring + " = 0???. Net veschestvennyh korney");
-            } else if (koefCdouble < 0) {
-                koefCstring = koefCstring.replace(" ", "");
-                System.out.println("\n" + koefCstring + " = 0???. Net veschestvennyh korney");
+        else if (_koefAdouble == 0 && _koefBdouble == 0 && _koefCdouble != 0) {
+            if (_koefCdouble > 0) {
+                _koefCstring = _koefCstring.replace(" ", "");
+                _koefCstring = _koefCstring.substring(1);
+                System.out.println("\n" + _koefCstring + " = 0???. Eto neravenstvo. Korney net");
+            } else if (_koefCdouble < 0) {
+                _koefCstring = _koefCstring.replace(" ", "");
+                System.out.println("\n" + _koefCstring + " = 0???. Eto neravenstvo. Korney net");
             }
         }
 
         // Если А == 0, B != 0, C == 0 (проверено)
-        else if (koefAdouble == 0 && koefBdouble != 0 && koefCdouble == 0) {
-            if (koefBdouble > 0) {
-                koefBstring = koefBstring.replace(" ", "");
-                koefBstring = koefBstring.substring(1);
-                System.out.println("\nVashe kvadratnoe uravnenie " + koefBstring + "x" + " = 0");
-            } else if (koefBdouble < 0) {
-                koefBstring = koefBstring.replace(" ", "");
-                System.out.println("\nVashe kvadratnoe uravnenie " + koefBstring + "x" + " = 0");
+        else if (_koefAdouble == 0 && _koefBdouble != 0 && _koefCdouble == 0) {
+            if (_koefBdouble > 0) {
+                _koefBstring = _koefBstring.replace(" ", "");
+                _koefBstring = _koefBstring.substring(1);
+                System.out.println("\nVashe uravnenie: " + _koefBstring + "x" + " = 0 ne yavlyaetsya kvadratnym");
+            } else if (_koefBdouble < 0) {
+                _koefBstring = _koefBstring.replace(" ", "");
+                System.out.println("\nVashe uravnenie: " + _koefBstring + "x" + " = 0 ne yavlyaetsya kvadratnym");
             }
         }
 
         // Если А != 0, B == 0, C == 0 (проверено)
-        else if (koefAdouble != 0 && koefBdouble == 0 && koefCdouble == 0) {
-            System.out.println("\nVashe kvadratnoe uravnenie " + koefAstring + "x^2 = 0");
+        else if (_koefAdouble != 0 && _koefBdouble == 0 && _koefCdouble == 0) {
+            System.out.println("\nVashe kvadratnoe uravnenie: " + _koefAstring + "x^2 = 0");
         }
 
         // Если А == 0, B == 0, C == 0 (проверено)
-        else if (koefAdouble == 0 && koefBdouble == 0 && koefCdouble == 0) {
+        else if (_koefAdouble == 0 && _koefBdouble == 0 && _koefCdouble == 0) {
             System.out.println("\nVashe uravnenie 0 = 0 bezogovorochno verno :)");
         }
 
         // Если А != 0, B != 0, C != 0 (проверено)
-        else if (koefAdouble != 0 && koefBdouble != 0 && koefCdouble != 0) {
-            System.out.println("Vashe kvadratnoe uravnenie " + koefAstring + "x^2" + koefBstring + "x"  + koefCstring + " = 0");
+        else if (_koefAdouble != 0 && _koefBdouble != 0 && _koefCdouble != 0) {
+            System.out.println("Vashe kvadratnoe uravnenie: " + _koefAstring + "x^2" + _koefBstring + "x" + _koefCstring + " = 0");
+        } else System.out.println("Vashe kvadratnoe uravnenie ne suschestvuet!");
+
+        if (_koefAdouble != 0) {
+            D = Math.pow(_koefBdouble, 2) - 4 * _koefAdouble * _koefCdouble;
+
+            if (D > 0) {
+                x1 = (-_koefBdouble + Math.pow(D, 1.0 / 2.0)) / 2.0;
+                x2 = (-_koefBdouble - Math.pow(D, 1.0 / 2.0)) / 2.0;
+                _answer = "Korni uravneniya: x1 = " + Math.round(x1 * 100.0) / 100.0 + ", x2 = " + Math.round(x2 * 100.0) / 100.0;
+            } else if (D < 0) {
+                _answer = "Net veschestvennih korney";
+            } else {
+                x1 = (-_koefBdouble + Math.pow(D, 1.0 / 2.0)) / 2.0;
+                _answer = "Uravnenie imeet tol'ko odin koren': x = " + Math.round(x1 * 100.0) / 100.0;
+            }
         }
 
-        else System.out.println("Vashe kvadratnoe uravnenie nevozmozhno");
-
-        //System.out.println("Vashe kvadratnoe uravnenie " + koefAstring + "x^2" + koefBstring + "x"  + koefCstring + " = 0");
-
-        //roots();
-    }
-
-    public static String roots() {
-        String answer = "";
-
-        return answer;
+        return _answer;
     }
 }
