@@ -69,6 +69,12 @@ public class Zadacha_3 {
         if (koefAdouble % 1 == 0) {
             System.out.println("Koeffitsient A: " + (int) koefAdouble);
             koefAstring = "" + (int) koefAdouble;
+            if (koefAstring.equals("1")) {
+                koefAstring = "";
+            }
+            if (koefAstring.equals("-1")) {
+                koefAstring = "-";
+            }
         } else {
             System.out.println("Koeffitsient A: " + koefAdouble);
             koefAstring = "" + koefAdouble;
@@ -77,8 +83,18 @@ public class Zadacha_3 {
         if (koefBdouble % 1 == 0) {
             System.out.println("Koeffitsient B: " + (int) koefBdouble);
             if (koefBdouble > 0)
-                koefBstring = " + " + (int) koefBdouble;
-            else koefBstring = " - " + (int) koefBdouble * (-1);
+                if (koefBdouble == 1) {
+                    koefBstring = " + ";
+                } else {
+                    koefBstring = " + " + (int) koefBdouble;
+                }
+            else {
+                if (koefBdouble == -1) {
+                    koefBstring = " - ";
+                } else {
+                    koefBstring = " - " + (int) koefBdouble * (-1);
+                }
+            }
         } else {
             System.out.println("Koeffitsient B: " + koefBdouble);
             if (koefBdouble > 0)
@@ -164,20 +180,20 @@ public class Zadacha_3 {
 
         // Если А != 0, B != 0, C != 0 (проверено)
         else if (_koefAdouble != 0 && _koefBdouble != 0 && _koefCdouble != 0) {
-            System.out.println("Vashe kvadratnoe uravnenie: " + _koefAstring + "x^2" + _koefBstring + "x" + _koefCstring + " = 0");
-        } else System.out.println("Vashe kvadratnoe uravnenie ne suschestvuet!");
+            System.out.println("\nVashe kvadratnoe uravnenie: " + _koefAstring + "x^2" + _koefBstring + "x" + _koefCstring + " = 0");
+        } else System.out.println("\nVashe kvadratnoe uravnenie ne suschestvuet!");
 
         if (_koefAdouble != 0) {
             D = Math.pow(_koefBdouble, 2) - 4 * _koefAdouble * _koefCdouble;
 
             if (D > 0) {
-                x1 = (-_koefBdouble + Math.pow(D, 1.0 / 2.0)) / 2.0;
-                x2 = (-_koefBdouble - Math.pow(D, 1.0 / 2.0)) / 2.0;
+                x1 = (-_koefBdouble + Math.pow(D, 1.0 / 2.0)) / (2.0 * _koefAdouble);
+                x2 = (-_koefBdouble - Math.pow(D, 1.0 / 2.0)) / (2.0 * _koefAdouble);
                 _answer = "Korni uravneniya: x1 = " + Math.round(x1 * 100.0) / 100.0 + ", x2 = " + Math.round(x2 * 100.0) / 100.0;
             } else if (D < 0) {
                 _answer = "Net veschestvennih korney";
             } else {
-                x1 = (-_koefBdouble + Math.pow(D, 1.0 / 2.0)) / 2.0;
+                x1 = (-_koefBdouble + Math.pow(D, 1.0 / 2.0)) / (2.0 * _koefAdouble);
                 _answer = "Uravnenie imeet tol'ko odin koren': x = " + Math.round(x1 * 100.0) / 100.0;
             }
         }
