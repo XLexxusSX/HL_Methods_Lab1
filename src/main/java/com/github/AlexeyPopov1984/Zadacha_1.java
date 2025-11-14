@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Zadacha_1 {
     public static void zadacha_1() {
-        System.out.println("\nReshenie zadachi 1:");
+        System.out.println("\nRESHENIE ZADACHI 1");
         String str = String.join(" ", sequence(500));
         System.out.println("Preobrazovannaya stroka: " + str);
     }

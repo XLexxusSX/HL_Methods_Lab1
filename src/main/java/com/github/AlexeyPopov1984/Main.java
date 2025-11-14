@@ -20,7 +20,7 @@ public class Main {
             System.out.println("3. Esli kvadratnoe uravnenie imeet veschestvennye korni...");
             System.out.println("4. Vychislit' summu ryada...");
             System.out.println("5. Proverit' yavlyaetsya li stroka polindromom...\n");
-            System.out.print("Vvedite nomer zadachi (ot 1 do 5) dlya pokaza ee resheniya ili 'q' dlya vyhoda: ");
+            System.out.print("Vvedite nomer zadachi (ot 1 do 5) ili 'q' dlya vyhoda: ");
 
             String input = scanner.nextLine();
 
@@ -31,13 +31,13 @@ public class Main {
             else if (input.equalsIgnoreCase("2"))
                 Zadacha_2.zadacha_2();
             else if (input.equalsIgnoreCase("3"))
-                System.out.println("\nReshenie zadachi 3:");
+                Zadacha_3.zadacha_3();
             else if (input.equalsIgnoreCase("4"))
                 System.out.println("\nReshenie zadachi 4:");
             else if (input.equalsIgnoreCase("5"))
                 System.out.println("\nReshenie zadachi 5:");
             else
-                System.out.println("\nNeverniy vvod. Poprobuyte snova.");
+                System.out.println("\nNeverniy vvod. Poprobuyte snova");
         } while (true);
     }
 }

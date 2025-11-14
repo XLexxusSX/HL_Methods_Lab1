@@ -2,8 +2,8 @@ package com.github.AlexeyPopov1984;
 
 public class Zadacha_2 {
     public static void zadacha_2() {
-        String sourceText = "make installABC";
-        System.out.println("\nReshenie zadachi 2:");
+        String sourceText = "make install";
+        System.out.println("\nRESHENIE ZADACHI 2");
         System.out.print("Ishodniy tekst: \"" + sourceText + "\".\nOtzerkalenniy tekst: \"" + textMirror(sourceText) + "\".\n");
     }
 
@@ -18,7 +18,6 @@ public class Zadacha_2 {
                 sbAnyStr.setCharAt(i, anyStr.charAt(anyStr.length() - 1 - i));
                 sbAnyStr.setCharAt(anyStr.length() - 1 - i, ch);
         }
-
 
         mirroredText = sbAnyStr.toString();
 
