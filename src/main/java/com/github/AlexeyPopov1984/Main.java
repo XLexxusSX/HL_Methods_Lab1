@@ -14,7 +14,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         do {
-            System.out.println("\nZadachi: ");
+            System.out.println("\nZADACHI: ");
             System.out.println("1. Programma, v kotoroy perebirayutsya chisla ot 1 do 500...");
             System.out.println("2. Zavedite peremennuyu tipa String so znacheniem <<make install>>...");
             System.out.println("3. Esli kvadratnoe uravnenie imeet veschestvennye korni...");
@@ -33,9 +33,9 @@ public class Main {
             else if (input.equalsIgnoreCase("3"))
                 Zadacha_3.zadacha_3();
             else if (input.equalsIgnoreCase("4"))
-                System.out.println("\nReshenie zadachi 4:");
+                Zadacha_4.zadacha_4();
             else if (input.equalsIgnoreCase("5"))
-                System.out.println("\nReshenie zadachi 5:");
+                Zadacha_5.zadacha_5();
             else
                 System.out.println("\nNeverniy vvod. Poprobuyte snova");
         } while (true);

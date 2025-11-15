@@ -8,7 +8,7 @@ public class Zadacha_3 {
         String koefAstring = "", koefBstring = "", koefCstring = "", answer = "";
         double koefAdouble = 0, koefBdouble = 0, koefCdouble = 0;
 
-        System.out.println("\nRESHENIE ZADACHI 3");
+        System.out.println("\nRESHENIE ZADACHI 3:");
         System.out.println("Koeffitsient A: ?");
         System.out.println("Koeffitsient B: ?");
         System.out.println("Koeffitsient C: ?\n");

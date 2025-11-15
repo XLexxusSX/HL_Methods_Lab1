@@ -3,11 +3,11 @@ package com.github.AlexeyPopov1984;
 public class Zadacha_2 {
     public static void zadacha_2() {
         String sourceText = "make install";
-        System.out.println("\nRESHENIE ZADACHI 2");
+        System.out.println("\nRESHENIE ZADACHI 2:");
         System.out.print("Ishodniy tekst: \"" + sourceText + "\".\nOtzerkalenniy tekst: \"" + textMirror(sourceText) + "\".\n");
     }
 
-    public static String textMirror(String anyStr) {
+    private static String textMirror(String anyStr) {
 
         StringBuilder sbAnyStr = new StringBuilder(anyStr);
         char ch;
