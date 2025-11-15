@@ -13,10 +13,10 @@ public class Zadacha_5 {
         System.out.println("\n" + checkPaliStr(strToCheck));
     }
 
-    private static String checkPaliStr(String _strToCheck) {
+    private static String checkPaliStr(String strToCheckTrans) {
 
         String answer = "";
-        String lowerCaseStrWithoutSpaces = _strToCheck.replace(" ", "").toLowerCase();
+        String lowerCaseStrWithoutSpaces = strToCheckTrans.replace(" ", "").toLowerCase();
         Boolean palindrom = true;
 
         for (int i = 0; i < lowerCaseStrWithoutSpaces.length() / 2; i++) {

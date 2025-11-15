@@ -13,11 +13,11 @@ public class Zadacha_4 {
 
     }
 
-    private static double seriesSum (double _maxElementSize) {
+    private static double seriesSum (double maxElementSizeTrans) {
         double sum = 0, elementSize = 2;
         int n = 2;
 
-        while (elementSize >= _maxElementSize) {
+        while (elementSize >= maxElementSizeTrans) {
 
             elementSize = 1 / (Math.pow(n, 2) + n - 2);
             sum += elementSize;
