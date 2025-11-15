@@ -3,7 +3,7 @@ package com.github.AlexeyPopov1984;
 import java.util.Scanner;
 
 public class Zadacha_3 {
-    public static void zadacha_3() {
+    public static void dataEntryTask_3() {
         Scanner scanner = new Scanner(System.in);
         String koefAstring = "", koefBstring = "", koefCstring = "", answer = "";
         double koefAdouble = 0, koefBdouble = 0, koefCdouble = 0;
@@ -114,11 +114,11 @@ public class Zadacha_3 {
             else koefCstring = " - " + koefCdouble * (-1);
         }
 
-        answer = roots(koefAdouble, koefBdouble, koefCdouble, koefAstring, koefBstring, koefCstring);
+        answer = rootsSearching(koefAdouble, koefBdouble, koefCdouble, koefAstring, koefBstring, koefCstring);
         System.out.println(answer);
     }
 
-    private static String roots(double _koefAdouble, double _koefBdouble, double _koefCdouble, String _koefAstring, String _koefBstring, String _koefCstring) {
+    private static String rootsSearching(double _koefAdouble, double _koefBdouble, double _koefCdouble, String _koefAstring, String _koefBstring, String _koefCstring) {
         String _answer = "";
         double D = 0, x1 = 0, x2 = 0;
 

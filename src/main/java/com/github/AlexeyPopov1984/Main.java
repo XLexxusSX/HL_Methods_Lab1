@@ -26,16 +26,16 @@ public class Main {
 
             if (input.equalsIgnoreCase("q"))
                 break;
-            else if (input.equalsIgnoreCase("1"))
-                Zadacha_1.zadacha_1();
-            else if (input.equalsIgnoreCase("2"))
-                Zadacha_2.zadacha_2();
-            else if (input.equalsIgnoreCase("3"))
-                Zadacha_3.zadacha_3();
-            else if (input.equalsIgnoreCase("4"))
-                Zadacha_4.zadacha_4();
-            else if (input.equalsIgnoreCase("5"))
-                Zadacha_5.zadacha_5();
+            else if (input.equals("1"))
+                Zadacha_1.dataEntryTask_1();
+            else if (input.equals("2"))
+                Zadacha_2.dataEntryTask_2();
+            else if (input.equals("3"))
+                Zadacha_3.dataEntryTask_3();
+            else if (input.equals("4"))
+                Zadacha_4.dataEntryTask_4();
+            else if (input.equals("5"))
+                Zadacha_5.dataEntryTask_5();
             else
                 System.out.println("\nNeverniy vvod. Poprobuyte snova");
         } while (true);

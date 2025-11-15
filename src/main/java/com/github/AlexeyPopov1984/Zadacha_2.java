@@ -1,7 +1,7 @@
 package com.github.AlexeyPopov1984;
 
 public class Zadacha_2 {
-    public static void zadacha_2() {
+    public static void dataEntryTask_2() {
         String sourceText = "make install";
         System.out.println("\nRESHENIE ZADACHI 2:");
         System.out.print("Ishodniy tekst: \"" + sourceText + "\".\nOtzerkalenniy tekst: \"" + textMirror(sourceText) + "\".\n");
