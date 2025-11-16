@@ -13,6 +13,7 @@ public class Zadacha_1 {
     private static List<String> sequence(int n) {
 
         List<String> list = new ArrayList<>();
+        String peremennayaStroka = "Hahaha";
 
         for (int i = 1; i <= n; i++) {
             if (i % 5 == 0) {
