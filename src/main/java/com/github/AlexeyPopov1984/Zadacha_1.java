@@ -8,6 +8,7 @@ public class Zadacha_1 {
         System.out.println("\nRESHENIE ZADACHI 1:");
         String str = String.join(" ", sequence(500));
         System.out.println("Preobrazovannaya stroka: " + str);
+        //Проверочный комментарий
     }
 
     private static List<String> sequence(int n) {
